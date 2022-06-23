@@ -1,0 +1,45 @@
+<div class="card m-4 mb-3" style="max-width: 480px">
+  <div class="card-header">Child Component</div>
+  <div class="card-body">
+    <!-- 
+      Color input
+     -->
+
+    <div class="mb-3">
+      <label class="form-label">Color</label>
+      <input
+        type="color"
+        class="form-control form-control-color"
+        [(ngModel)]="block.color"
+      />
+    </div>
+
+    <!-- 
+      Text Input
+     -->
+
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <textarea
+        class="form-control"
+        rows="2"
+        [(ngModel)]="block.content"
+      ></textarea>
+    </div>
+
+    <!-- 
+      Single Value
+    -->
+
+    <ng-container *ngIf="singleValue">
+      <div class="mb-3">
+        <label class="form-label">Single Value Color</label>
+        <input
+          type="color"
+          class="form-control form-control-color"
+          [(ngModel)]="singleValue"
+        />
+      </div>
+    </ng-container>
+  </div>
+</div>

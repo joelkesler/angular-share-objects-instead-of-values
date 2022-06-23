@@ -1,0 +1,44 @@
+<div class="container-fluid">
+  <div class="row gx-0">
+    <div class="col border-end">
+      <div class="bg-light p-4 border-bottom">
+        <div class="mb-3">
+          <label class="form-label">Name</label>
+          <input class="form-control" [(ngModel)]="objectToShare.name" />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <textarea
+            class="form-control"
+            rows="2"
+            [(ngModel)]="objectToShare.description"
+          ></textarea>
+        </div>
+      </div>
+
+      <ng-container *ngFor="let blockItem of objectToShare.blocks">
+        <!-- 
+          Child components who are given an object
+         -->
+
+        <app-child [block]="blockItem"></app-child>
+
+        <!-- 
+          Child component given a single value
+         -->
+
+        <!-- <app-child
+          [block]="blockItem"
+          [singleValue]="blockItem.color"
+        ></app-child> -->
+
+        <!-- 
+
+        -->
+      </ng-container>
+    </div>
+    <div class="col p-4 bg-dark text-light">
+      <div [innerHTML]="objectToShareText"></div>
+    </div>
+  </div>
+</div>
