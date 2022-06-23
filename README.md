@@ -1,6 +1,6 @@
 # Passing Objects vs Passing Values for sharing data between children and parent components in Angular
 
-From a Vendasta internal tech demo>
+From a Vendasta internal tech demo.
 
 When you pass an object as an input to a component, it's used as a reference/pointer to the original object. Any change you make to that object in a child component are shared between everything using that object.
 
