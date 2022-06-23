@@ -2,7 +2,7 @@
 
 From a Vendasta internal tech demo.
 
-[Try on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ivy-aqinhv)
+[Try on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ivy-aqinhv?file=src%2Fapp%2Fapp.component.html)
 
 
 When you pass an object as an input to a component, it's used as a reference/pointer to the original object. Any change you make to that object in a child component are shared between everything using that object.
